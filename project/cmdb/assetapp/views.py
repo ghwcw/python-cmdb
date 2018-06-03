@@ -8,7 +8,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.decorators.csrf import csrf_exempt
 
 
-@csrf_exempt  # 忽略csrf验证
+@csrf_exempt  # 忽略csrf post令牌
 def report(request):
     if request.method == 'POST':
         asset_data = request.POST.get('asset_data', None)
